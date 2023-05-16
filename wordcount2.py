@@ -11,9 +11,9 @@ folder_path = input("Enter the folder path containing the Word documents: ")
 word_files = [f.strip() for f in os.listdir(folder_path) if f.endswith('.docx')]
 
 # Print the list of word files
-# print("\nGiven Files:")
-# for file in word_files:
-#     print(file)
+print("\nGiven Files:")
+for file in word_files:
+    print(file)
 
 # Sorting function
 # def sort_filenames(filename):
@@ -26,9 +26,9 @@ word_files = [f.strip() for f in os.listdir(folder_path) if f.endswith('.docx')]
 sorted_files = natsorted(word_files)
 
 # Print the list of word files after sorting
-# print("\nFiles sorted:")
-# for file in sorted_files:
-#     print(file)
+print("\nFiles sorted:")
+for file in sorted_files:
+    print(file)
 
 # Initialize a dictionary to store the results for each student
 results = {}
@@ -126,5 +126,5 @@ with open('analysis.csv', mode='w', newline='') as csv_file:
         row.insert(2, total_comment_count)
         writer.writerow(row)
 
-# print(f"\nNumber of students: {len(results)}")
+print(f"\nNumber of students: {len(results)}")
 print("Analysis complete. Results written to analysis.csv.")
