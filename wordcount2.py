@@ -15,13 +15,6 @@ print("\nGiven Files:")
 for file in word_files:
     print(file)
 
-# Sorting function
-# def sort_filenames(filename):
-#     parts = re.split('-|\s', filename, maxsplit=2)
-#     first_num = int(parts[0]) if len(parts) > 0 and parts[0].isdigit() else 0
-#     second_num = int(parts[1]) if len(parts) > 1 and parts[1].isdigit() else 0
-#     return (first_num, second_num)
-
 # Sort the word_files list using natsort
 sorted_files = natsorted(word_files)
 
@@ -81,11 +74,6 @@ for file_name in sorted_files:
 
         # Count the total number of words written by the student
         word_count = sum(len(comment.split()) for comment in comments)
-        # for comment in comments:
-        #     words = comment.split()
-        #     for i, word in enumerate(words, start=1):
-        #         print(f"{i}.{word}")
-        #     word_count = len(words)
 
         # Add the results for this student to the dictionary
         results[student_name]['word_count'] += word_count
